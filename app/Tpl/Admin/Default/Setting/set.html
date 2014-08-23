@@ -1,0 +1,46 @@
+<include file="../Public/header" />
+
+
+  <!--选项卡 BEGIN-->
+  <div class="tabs">
+    <ul>
+      <li><a href="javascript:void(0)" class="current">基本信息</a></li>
+    </ul>
+  </div>
+  <!--END 选项卡-->
+  
+  <!--编辑表单 BEGIN-->
+  <div class="edit">
+      <form action="{:U('Admin/Setting/doSet')}" method="post" enctype="multipart/form-data">
+      <dl>
+        <dt>接口地址：</dt>
+        <dd>
+          {$url_api}
+        </dd>  
+      </dl>
+      <dl>
+        <dt>接口凭证：</dt>
+        <dd>
+          <input type="text" name="token" value="{$list.token}"  class="w250"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>APPID: </dt>
+        <dd>
+          <input type="text" name="appid"  value="{$list.appid}" class="w250" />
+        </dd>
+      </dl>
+      <dl>
+        <dt>APPSECRECT: </dt>
+        <dd>
+          <input type="text" name="appsecrect" value="{$list.appsecrect}" class="w250"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>&nbsp;</dt>
+        <dd><input type="submit"  value="提 交" class="btn submit-btn" /></dd>
+      </dl>
+    </form>
+  </div>
+  <!--END 编辑表单--> 
+<include file="../Public/footer" />

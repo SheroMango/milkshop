@@ -1,0 +1,109 @@
+body{   font-size:12px; text-shadow:none; color:#333; font-family:"微软雅黑";}
+.area-auto{ width:990px; margin:0 auto;}
+a{ text-decoration:none;}
+ 
+hr { border-color:#fff;}
+table td,table th { border-color:#c2e68f;}
+
+.header h1 { width:146px; height:52px; background:url(../images/logo.png); margin:30px auto; text-indent:-9999px;} 
+.nav  { border-top:1px solid #aa9175; border-bottom:1px solid #aa9175; text-align:center;}
+.nav  ul {}
+.nav  ul li {   padding:5px 30px; border-right:1px solid #aa9175; display:inline-block}
+.nav  ul li  a,.nav  ul li  a span { display:block; color:#aa9175; font-weight:bold; text-align:center;}
+.nav  ul li  a span { font-weight:normal;}
+.nav  ul li.ace { border-left:1px solid #aa9175;}
+.nav  ul li.last { border:0;}
+
+
+.loading{ width:100%; background:#f6f7ed; }
+.loading-cent{ width:100%; background:url(../images/loading.gif) no-repeat center center;}
+
+#contents { background:#f6f7ed; display:none;}
+.sidebar-right {
+    position: fixed;
+    right: 0;
+    text-align: left;
+    top: 0;
+    z-index: 100;
+    float:right;
+		width:240px; 
+		padding-top:120px; 
+		background:url(../images/sidebar-right-bg.jpg); 
+		box-shadow:0px -3px 4px #999;
+}
+.sidebar-right ul li { height:40px; padding:5px 20px; border-top:1px solid #e8eda0; border-bottom:1px solid #f3f5d9;}
+.sidebar-right ul li.active { background:#dde0a7;}
+.sidebar-right ul li a{ display:block; color:#022500;  font-weight:bold; }
+.sidebar-right ul li a img { float:left; margin-right:10px;}
+.sidebar-right ul li a span { color:#56b122;  font-weight:normal; display:block;}
+
+.mainArea { 
+     background:#f6f7ed;
+		width:560px;	
+    float: right;
+    left: -240px;
+    min-height: 100%;
+    position: relative;
+    text-align: left;
+    width: 565px;
+    z-index: 99;
+		
+		
+
+}
+.visu { background:#fff; width:50%; background:url(../images/bantou.png); }
+.mainAreaInner{ 
+background:url(../images/center-bg.jpg); 
+   display:none;
+		filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+-moz-opacity:0.5; /*Firefox私有，透明度50%*/
+opacity:0.5;/*其他，透明度50%*/}
+.mainArea h2 { position:relative; font-size:28px; padding:20px 40px;  border-bottom:3px solid #56b122;}
+.fub { position:fixed; right:785px; top:20px; z-index:999; width:36px; height:32px; background:url(../images/icon.png);}
+.mainArea h2 span { float:right; font-size:16px; line-height:50px; }
+.mainArea em.hr{ display:block; height:2px; margin-top:2px; overflow:hidden; background:#cce4aa;}
+.contentsMain { margin:38px; 		
+   border-bottom:1px dashed #b2b99c;
+		padding-bottom:30px;
+		margin-bottom:30px;
+		margin-top:30px;}
+.contentsMain h3 { font-size:16px; font-family:"宋体"; font-weight:bold;}
+.contentsMain h3  em{ font-size:40px; font-style:italic; position:relative; left:-20px;}
+.contentsMain p { font-family:"宋体"; color:#637054; line-height:1.6em; padding:3px 0;}
+
+.visualArea{
+     left: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+		background:url(../images/center-bg.jpg); 
+		
+	   
+
+}
+.visualPict {
+     width:50%;
+		 overflow:hidden;
+  		filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+			-moz-opacity:0.5; /*Firefox私有，透明度50%*/
+			opacity:0.5;/*其他，透明度50%*/
+}
+.visualArea img { width:100%;}
+.contact { bottom:10px; left:0;}
+.footer { line-height:100px; color:#b99b77; font-size:14px; font-family:Arial;}
+.content-two { 
+   background:url(../images/inde-bag2.jpg);background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='../images/inde-bag2.jpg',
+    sizingMethod='scale');}
+.content-two h1 { width:165px; height:73px; margin:50px 0 0 50px; background:url(../images/logo-2.png); text-indent:-9999px;}		
+.content-two h2 { width:569px; height:206px; margin:50px auto 0; background:url(../images/logo-3.png); text-indent:-9999px; }
+.footer-nav { position:absolute; bottom:30px;}
+.footer-nav  ul li { display:inline-block; *zoom:1; *display:inline; background:url(../images/nav-bg-kong.png) no-repeat top center; padding:28px 15px 0; }
+.footer-nav  ul li:hover{background:url(../images/nav-bg.png) no-repeat top center;}
+.footer-nav  ul li a { color:#fff;}
+.footer-nav  ul li span { display:block;}
+		

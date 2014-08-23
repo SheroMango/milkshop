@@ -1,0 +1,68 @@
+<include file="../Public/header" />
+
+  <!--选项卡 BEGIN-->
+  <div class="tabs">
+    <ul>
+      <li><a href="javascript:void(0)" class="current">修改密码</a></li>
+    </ul>
+  </div>
+
+  <div class="edit">
+
+    <form method="post" action="{:U('Admin/Setting/pwd')}" enctype="multipart/form-data">
+
+    <dl>
+
+      <dt>旧密码：</dt>
+
+      <dd>
+
+        <input type="password" name="oldpass" class="w300" />
+
+      </dd>
+
+    </dl>
+
+    <dl>
+
+      <dt>新密码：</dt>
+
+      <dd>
+
+        <input type="password" name="newpass" class="w300"/>
+
+      </dd>
+
+    </dl>
+
+    <dl>
+
+      <dt>重复新密码：</dt>
+
+      <dd>
+
+        <input type="password" name="repass" class="w300"/>
+
+      </dd>
+
+    </dl>
+
+    <dl>
+
+      <dt>&nbsp;</dt>
+
+      <dd><input type="submit"  value="提 交" class="btn_b"/></dd>
+
+    </dl>
+
+    </form>
+
+  </div>
+
+  
+
+</div>
+
+
+
+<include file="../Public/footer" />
