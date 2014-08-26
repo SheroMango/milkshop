@@ -1,0 +1,347 @@
+[ 2014-08-26T10:39:21+08:00 ] 127.0.0.1 /milkshop/
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.057210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.057385s ]
+
+[ 2014-08-26T10:39:23+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Setting&a=set
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002606s ]
+SQL: SHOW COLUMNS FROM `m_setting` [ RunTime:0.048785s ]
+ERR: Table 'milkshop.m_setting' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `m_setting`
+SQL: SELECT * FROM `m_setting`  [ RunTime:0.002240s ]
+ERR: Table 'milkshop.m_setting' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `m_setting` 
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\milkshop\app\Lib\Action\Admin\SettingAction.class.php 第 19 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\milkshop\app\Lib\Action\Admin\SettingAction.class.php 第 22 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003219s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003342s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.050324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050445s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001044s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000993s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000839s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004100s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001132s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001217s ]
+
+[ 2014-08-26T14:21:52+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.005260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005433s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.185556s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.076642s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000603s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.020201s ]
+INFO: [ view_template ] --END-- [ RunTime:0.020393s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.115027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115141s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.040919s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.003855s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001552s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001731s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.048727s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.021487s ]
+INFO: [ view_end ] --END-- [ RunTime:0.021580s ]
+
+[ 2014-08-26T14:21:56+08:00 ] ERR: (ThinkException) 无法加载模块:Group
+[ 2014-08-26T14:21:57+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.007948s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.002913s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000555s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000695s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000782s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015129s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000719s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000604s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000441s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003758s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.003431s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003534s ]
+
+[ 2014-08-26T14:22:09+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.019379s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.002795s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000946s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001424s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001596s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017837s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000719s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001300s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000809s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000902s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005636s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001396s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001508s ]
+
+[ 2014-08-26T14:23:26+08:00 ] 127.0.0.1 /milkshop/
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001278s ]
+
+[ 2014-08-26T14:23:38+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Setting&a=set
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002100s ]
+SQL: SHOW COLUMNS FROM `m_setting` [ RunTime:0.010521s ]
+ERR: Table 'milkshop.m_setting' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `m_setting`
+SQL: SELECT * FROM `m_setting`  [ RunTime:0.000842s ]
+ERR: Table 'milkshop.m_setting' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `m_setting` 
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\milkshop\app\Lib\Action\Admin\SettingAction.class.php 第 19 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\milkshop\app\Lib\Action\Admin\SettingAction.class.php 第 22 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002826s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002977s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.082579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082703s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001094s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001334s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001879s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001709s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006346s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001873s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002015s ]
+
+[ 2014-08-26T14:23:42+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.007189s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.008339s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.001762s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001324s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001436s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.020436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020554s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000806s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000777s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000576s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000835s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003285s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001085s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001195s ]
+
+[ 2014-08-26T14:23:45+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Product&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001645s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\ProductAction.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `m_product` [ RunTime:0.949822s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_product` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.002015s ]
+SQL: SELECT * FROM `m_product` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.001703s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.226344s ]
+INFO: [ view_template ] --END-- [ RunTime:0.226475s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: pages E:\wamp\www\milkshop\app\Runtime\Cache\Admin\2db96c318d5f6a9e9dea8e6372695b6d.php 第 99 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.176221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.176346s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000915s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001019s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000649s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003961s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001697s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001847s ]
+
+[ 2014-08-26T14:23:48+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=ProType&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+SQL: SHOW COLUMNS FROM `m_pro_type` [ RunTime:0.066013s ]
+SQL: SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2   [ RunTime:0.051032s ]
+ERR: Unknown column 'sort' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2  
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.040355s ]
+INFO: [ view_template ] --END-- [ RunTime:0.040471s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.069128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069229s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000752s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000851s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000760s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004230s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001110s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001220s ]
+
+[ 2014-08-26T14:23:51+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001284s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.061034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.015295s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000772s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000828s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000932s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.083392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083515s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000859s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001038s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000627s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000846s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003739s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001105s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001216s ]
+
+[ 2014-08-26T14:25:14+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001439s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.026203s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.001653s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.001435s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000684s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000774s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014958s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000951s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000624s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000467s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000911s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003239s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001012s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001118s ]
+
+[ 2014-08-26T14:25:17+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.009660s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.000848s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000851s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000916s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001027s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016844s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016967s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000744s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000642s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000451s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000702s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002819s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001106s ]
+
+[ 2014-08-26T14:26:43+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002402s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.006369s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.001047s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.001233s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003815s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003996s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.025901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026075s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001863s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.003330s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000817s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000951s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007308s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001200s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2014-08-26T14:28:13+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001240s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.005487s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.001762s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.008820s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001575s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001772s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017097s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000899s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000709s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.009578s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012676s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001930s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002123s ]
+

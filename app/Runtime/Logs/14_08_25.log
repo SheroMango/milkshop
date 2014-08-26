@@ -1,0 +1,86 @@
+[ 2014-08-25T10:33:45+08:00 ] 127.0.0.1 /milkshop/
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.006155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006331s ]
+
+[ 2014-08-25T10:33:47+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Setting&a=set
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.007212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007413s ]
+SQL: SHOW COLUMNS FROM `m_setting` [ RunTime:0.007354s ]
+ERR: Table 'milkshop.m_setting' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `m_setting`
+SQL: SELECT * FROM `m_setting`  [ RunTime:0.001201s ]
+ERR: Table 'milkshop.m_setting' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `m_setting` 
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\milkshop\app\Lib\Action\Admin\SettingAction.class.php 第 19 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\milkshop\app\Lib\Action\Admin\SettingAction.class.php 第 22 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.010750s ]
+INFO: [ view_template ] --END-- [ RunTime:0.010891s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.080767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080894s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.005513s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.004077s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.022963s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.023770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.056728s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.007391s ]
+INFO: [ view_end ] --END-- [ RunTime:0.007567s ]
+
+[ 2014-08-25T10:33:51+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Product&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.005452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006011s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\ProductAction.class.php 第 45 行.
+SQL: SHOW COLUMNS FROM `m_product` [ RunTime:0.007366s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_product` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.003166s ]
+SQL: SELECT * FROM `m_product` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000542s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.010772s ]
+INFO: [ view_template ] --END-- [ RunTime:0.010935s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: pages E:\wamp\www\milkshop\app\Runtime\Cache\Admin\2db96c318d5f6a9e9dea8e6372695b6d.php 第 99 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.140890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.141008s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.004765s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.006620s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.007392s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.004739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.025067s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.005490s ]
+INFO: [ view_end ] --END-- [ RunTime:0.005704s ]
+
+[ 2014-08-25T10:33:54+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=ProType&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.005524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005663s ]
+SQL: SHOW COLUMNS FROM `m_pro_type` [ RunTime:0.005738s ]
+SQL: SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2   [ RunTime:0.002003s ]
+ERR: Unknown column 'sort' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2  
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.024228s ]
+INFO: [ view_template ] --END-- [ RunTime:0.024410s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.055736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055930s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.004074s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.006358s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.010723s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.004488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026070s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.013451s ]
+INFO: [ view_end ] --END-- [ RunTime:0.013595s ]
+
