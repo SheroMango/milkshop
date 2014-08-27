@@ -2,7 +2,7 @@
 /**
  * 用户管理控制器
  */
-class UserAction extends HomeAction
+class UserAction extends AdminAction
 {
 
 

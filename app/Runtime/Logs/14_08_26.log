@@ -345,3 +345,241 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:0.001930s ]
 INFO: [ view_end ] --END-- [ RunTime:0.002123s ]
 
+[ 2014-08-26T14:40:23+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=ProType&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001970s ]
+SQL: SHOW COLUMNS FROM `m_pro_type` [ RunTime:0.036171s ]
+SQL: SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2   [ RunTime:0.000642s ]
+ERR: Unknown column 'sort' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2  
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.003267s ]
+INFO: [ view_template ] --END-- [ RunTime:0.003390s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.025933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026053s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001353s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001006s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001181s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005126s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001744s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001851s ]
+
+[ 2014-08-26T14:40:26+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=ProType&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+SQL: SHOW COLUMNS FROM `m_pro_type` [ RunTime:0.004364s ]
+SQL: SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2   [ RunTime:0.002577s ]
+ERR: Unknown column 'sort' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM `m_pro_type` ORDER BY sort desc LIMIT 0,2  
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000945s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001072s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.020305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020415s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000794s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000723s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000611s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000868s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003294s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001161s ]
+
+[ 2014-08-26T14:40:27+08:00 ] ERR: (ThinkException) 无法加载模块:Group
+[ 2014-08-26T16:54:23+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Group&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.058698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.077757s ]
+SQL: SHOW COLUMNS FROM `m_group` [ RunTime:1.037829s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `m_group`
+SQL: SELECT * FROM `m_group`  [ RunTime:0.006229s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `m_group` 
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.144761s ]
+INFO: [ view_template ] --END-- [ RunTime:0.144874s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.523209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.523339s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.002442s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.024210s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002692s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.027326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.057165s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.018550s ]
+INFO: [ view_end ] --END-- [ RunTime:0.018648s ]
+
+[ 2014-08-26T16:54:33+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Group&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `m_group` [ RunTime:0.006379s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `m_group`
+SQL: SELECT * FROM `m_group`  [ RunTime:0.002968s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `m_group` 
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000877s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001031s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.020161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020267s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000722s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000761s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000735s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003832s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001716s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001892s ]
+
+[ 2014-08-26T16:54:34+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.002083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002321s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.367928s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.021483s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.001473s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.010579s ]
+INFO: [ view_template ] --END-- [ RunTime:0.010701s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.040329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040440s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000790s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000852s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000630s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003378s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001020s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001137s ]
+
+[ 2014-08-26T16:54:35+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Group&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001601s ]
+SQL: SHOW COLUMNS FROM `m_group` [ RunTime:0.009347s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `m_group`
+SQL: SELECT * FROM `m_group`  [ RunTime:0.001070s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `m_group` 
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000777s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000885s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017987s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001685s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001053s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000928s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006429s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001637s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001733s ]
+
+[ 2014-08-26T16:54:36+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001625s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.008737s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.004245s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.002631s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000949s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001065s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.017403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017574s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001016s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000871s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000765s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000995s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003954s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001123s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001219s ]
+
+[ 2014-08-26T16:54:39+08:00 ] ERR: (ThinkException) 无法加载模块:Order
+[ 2014-08-26T18:07:36+08:00 ] ERR: (ThinkException) 无法加载模块:Order
+[ 2014-08-26T18:07:39+08:00 ] ERR: (ThinkException) 无法加载模块:Order
+[ 2014-08-26T18:08:20+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=User&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+NOTIC: [8] Undefined variable: search E:\wamp\www\milkshop\app\Lib\Action\Admin\UserAction.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `m_user` [ RunTime:0.028345s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `m_user` WHERE ( `pid` = '0' ) LIMIT 1   [ RunTime:0.024624s ]
+SQL: SELECT * FROM `m_user` WHERE ( `pid` = '0' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000793s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.045766s ]
+INFO: [ view_template ] --END-- [ RunTime:0.045893s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.668984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.669103s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.040753s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.004393s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.028985s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.004216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.079093s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.005716s ]
+INFO: [ view_end ] --END-- [ RunTime:0.005835s ]
+
+[ 2014-08-26T18:08:22+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Group&a=ls
+NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+SQL: SHOW COLUMNS FROM `m_group` [ RunTime:0.011298s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `m_group`
+SQL: SELECT * FROM `m_group`  [ RunTime:0.001174s ]
+ERR: Table 'milkshop.m_group' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `m_group` 
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.024400s ]
+INFO: [ view_template ] --END-- [ RunTime:0.024577s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.049103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049222s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000979s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000911s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002023s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000853s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005072s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001057s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001173s ]
+
+[ 2014-08-26T18:08:23+08:00 ] ERR: (ThinkException) 无法加载模块:Order
