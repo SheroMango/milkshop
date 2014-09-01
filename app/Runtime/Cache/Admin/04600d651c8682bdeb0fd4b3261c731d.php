@@ -29,7 +29,7 @@
 
 <div class="tabs">
     <ul>
-        <li class="current"><a href="javascript:void(0)" class="current">文章信息</a></li>
+        <li class="current"><a href="javascript:void(0)" class="current">用户信息</a></li>
     </ul>
 </div>
 <div class="edit">

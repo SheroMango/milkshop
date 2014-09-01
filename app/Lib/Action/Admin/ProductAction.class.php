@@ -2,7 +2,7 @@
 /**
  * 商品控制器
  * @author Mango
- * @version 2014.08.23
+ * @version 2014.08.29
  */
 class ProductAction extends AdminAction
 {
@@ -20,84 +20,80 @@ class ProductAction extends AdminAction
 	 */
 	public function ls()
 	{ 
-		//sort
-		if(!empty($_GET['sort'])){
-            if($_GET['type'] == '1'){
-                $type = 'asc';
-                $type_num = '0';
-            }else{
-                $type = 'desc';
-                $type_num = '1';
-            }
-            $sort = $_GET['sort'].' '.$type;
-            $this->assign('type', $type_num);
-        }else{
-            $sort = 'id desc';
-            $this->assign('type', '1');
-        }
-
-
 		//search 
 		$map = array();
 		if(IS_POST){
 			$search = $this->_post('search');
 		}
 		if($search){
-			$map['name'] = array('lile','%{$search}%');
+			$map['name'] = array('like',"%{$search}%");
 		}
-
-		$pid = $this->_get('pid');
-		$pid = ($pid) ? $pid : '0';
-		$map['pid'] = array('eq',$pid);
 
 		//paging
 		$count = D('Product')->where($map)->count();
 		$page = page($count);
 
-        $list = D('Product')->where($map)->order($sort)->limit($page->firstRow, $page->listRows)->select();
+        $list = D('Product')->where($map)->limit($page->firstRow, $page->listRows)->select();
+        foreach ($list as $key => $value) {
+            $name = D('ProType')->where('id='.$value['pid'])->getField('name');
+            $list[$key]['type'] = $name;
+        }
 		$this->assign('list',$list);
-		$this->assign('pid',$pid);
 		$this->display();
 	}
 
 	/**
-	 * info
+	 * diaplay add product view
 	 */
-	public function info()
-    {
-        $obj = D('Product');
-        if(empty($_POST)){
-            $id = $this->_get('id');
-            if(!empty($id)){
-                $info = $obj->where('id='.$id)->find();
-                $pid = $info['pid'];
-                $this->assign('info', $info);
-            }else{
-                $pid = $this->_get('pid');
-            }
-            $this->assign('typeList', $this->get_protype_list());
-            $this->assign('pid', $pid);
-            $this->display();
-            exit;
-        }
-        $data = $this->_post();
-        if(!empty($_FILES['pic']['name'])){
-            $picList = uploadPic();
-            if($picList['code'] != 'error'){
-                $data['pic'] = $picList['pic']['savename'];
-            }
-        }
-        $data['time_modify'] = time();
-        if(empty($data['id'])){
-            $obj->add($data);
-            $data['time_add'] = time();
-        }else{
-            $obj->save($data);
-        }
-        $this->success('操作成功');
-
-        
+	public function addPro()
+    {       
+        $this->assign('typeList',$this->get_protype_list());
+        $this->display();
     }
+
+    /**
+     * do add product
+     */
+    public function doAddPro()
+    {
+        $data = $_POST;
+        $data['time_create'] = $data['time_modify'] = time();
+        $result = D('Product')->add($data);
+        if(!empty($result)){
+            $this->success('添加成功',U('Product/ls'));
+        }else{
+            $this->error('添加失败',U('Product/ls'));
+        }
+    }
+
+    /**
+     * display update product view
+     */
+    public function updatePro()
+    {
+        $id = intval($_GET['id']);
+        $info = D('Product')->where('id='.$id)->find();
+        $this->assign('info',$info);
+        $this->assign('typeList',$this->get_protype_list());
+        $this->display();
+    }
+
+    /**
+     * do update product
+     */
+    public function doUpdatePro()
+    {
+        $data = $_POST;
+        $data['time_modify'] = time();
+        $result = D('Product')->save($data);
+        if(!empty($result)){
+            $this->success('修改成功');
+        }else{
+            $this->error('修改失败');
+        }
+    }
+
+
     /**
      * del
      */

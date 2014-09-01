@@ -37,7 +37,7 @@
   <!--END 选项卡-->
   <!--工具栏 BEGIN-->
   <div class="toolbar">
-    <a href="<?php echo U('Admin/ProType/info');?>" class="btn"><span>添加商品分类</span></a>
+    <a href="<?php echo U('Admin/ProType/addType');?>" class="btn"><span>添加商品分类</span></a>
   </div>
   <!--END工具栏 BEGIN-->
   
@@ -61,7 +61,7 @@
                 <td><input type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"></td>
                 <td><?php echo ($vo["name"]); ?></td>
                 <td>
-                    <a href="<?php echo U('Admin/ProType/info',array('id'=>$vo[id]));?>" class="mr10">编辑</a>
+                    <a href="<?php echo U('Admin/ProType/updateType',array('id'=>$vo[id]));?>" class="mr10">编辑</a>
                     <a href="<?php echo U('Admin/ProType/del',array('id'=>$vo[id]));?>">删除</a>
                 </td>
               </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>

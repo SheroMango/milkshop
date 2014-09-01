@@ -9,36 +9,62 @@ class GroupAction extends AdminAction
      */
     public function ls()
     {
-        $groupList = D('Group')->select();
+        $groupList = D('UserGroup')->select();
         $this->assign('list', $groupList);
         $this->display();
     }
 
     /**
-     * info
+     * display add group view
      */
-    public function info()
+    public function addGroup()
     {
-        $groupObj = D('Group');
-        if(empty($_POST)){
-            $id = $this->_get('id');
-            if(!empty($id)){
-                $info = $GroupObj->where('id='.$id)->find();
-                $this->assign('info', $info);
-            }
-            $this->display();
-            exit;
-        }
-        $data = $this->_post();   
-        $id = $this->_post('id');
-        if(empty($id)){
-            $groupObj->add($data);
-        }else{
-            $groupObj->save($data);
-        }
-        $this->success('操作成功');
+        $this->assign('list',D('UserGroup')->select());
+        $this->display();
     }
 
+    /**
+     * do add group
+     */
+    public function doAddGroup()
+    {
+        $data = $_POST;
+        $result = D('UserGroup')->add($data);
+        if(!empty($result)){
+            $this->success('添加成功',U('Group/ls'));
+        }else{
+            $this->error('添加失败',U('Group/ls'));
+        }
+    }
+
+    /**
+     * diapley update group
+     */
+    public function updateGroup()
+    {
+        $id = intval($_GET['id']);
+        $info = D('UserGroup')->where('id='.$id)->find();
+        $this->assign('info',$info);
+        $this->display();
+    }
+
+    /**
+     * do update
+     */
+    public function doUpdateGroup()
+    {
+        $data = $_POST;
+        $result = D('UserGroup')->save($data);
+        if(!empty($result)){
+            $this->success('修改成功',U('Group/ls'));
+        }else{
+            $this->error('添加失败',U('Group/ls'));
+        }
+    }
+
+    /**
+     * del user group
+     */
     public function del(){
         //删除的ID的数组
         $delIds = array();

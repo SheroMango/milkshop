@@ -29,22 +29,50 @@
 
 <div class="tabs">
     <ul>
-        <li class="current"><a href="javascript:void(0)" class="current">商品分类</a></li>
+        <li class="current"><a href="javascript:void(0)" class="current">添加商品</a></li>
     </ul>
 </div>
 <div class="edit">
-    <form method="post" action="<?php echo U('Admin/ProType/info');?>" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>" />
+	<form method="post" action="<?php echo U('Admin/Product/doAddPro');?>" entype="multipart/form-data">
+		<dl>
+			<dt>商品分类：</dt>
+			<dd><select name="pid" value="">
+				<?php if(is_array($typeList)): $i = 0; $__LIST__ = $typeList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($i % 2 );++$i;?><option value="<?php echo ($type["id"]); ?>"><?php echo ($type["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+			</select></dd>
+		</dl>
+		<dl>
+			<dt>商品名称：</dt>
+			<dd><input type="text" name="name" value="" class="w200"></dd>
+		</dl>
+		<dl>
+            <dt>商品图片：</dt>
+            <dd><input type="file" name="pic"></dd>
         <dl>
-            <dt>商品分类名称：</dt>
-            <dd><input type="text" name="name" value="<?php echo ($info["name"]); ?>" class="w200" /></dd>
-        </dl>
-        <dl>
+		<dl>
+			<dt>商品描述：</dt>
+			<dd><textarea name="desc" id="editor" cols="80" rows="20"></textarea></dd>
+		</dl>
+		<dl>
+			<dt>单价：</dt>
+			<dd><input type="text" name="price" value="">元</dd>
+		</dl>
+		<dl>
+			<dt>库存：</dt>
+			<dd><input type="text" name="num" value=""></dd>
+		</dl>
+		<dl>
             <dt></dt>
-            <dd><input type="submit" value="更 新" class="btn submit-btn" /></dd>
+            <dd><input type="submit" value="添 加" class="btn submit-btn" /></dd>
         </dl>
-    </form>
+	</form>
 </div>
 </div>
 </body>
 </html>
+
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.js">
+</script>
+<script type="text/javascript">
+UE.getEditor('editor');
+</script>

@@ -5,11 +5,11 @@
     </ul>
 </div>
 <div class="edit">
-    <form method="post" action="{:U('Admin/ProType/info')}" enctype="multipart/form-data">
+    <form method="post" action="{:U('Admin/ProType/doUpdateType')}" enctype="multipart/form-data">
         <input type="hidden" name="id" value="{$info.id}" />
         <dl>
-            <dt>商品分类名称：</dt>
-            <dd><input type="text" name="title" value="{$info.name}" class="w200" /></dd>
+            <dt>商品分类：</dt>
+            <dd><input type="text" name="name" value="{$info.name}" class="w200" /></dd>
         </dl>
         <dl>
             <dt></dt>

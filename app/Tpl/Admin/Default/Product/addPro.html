@@ -1,0 +1,49 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">添加商品</a></li>
+    </ul>
+</div>
+<div class="edit">
+	<form method="post" action="{:U('Admin/Product/doAddPro')}" entype="multipart/form-data">
+		<dl>
+			<dt>商品分类：</dt>
+			<dd><select name="pid" value="">
+				<volist name="typeList" id="type">
+					<option value="{$type.id}">{$type.name}</option>
+				</volist>
+			</select></dd>
+		</dl>
+		<dl>
+			<dt>商品名称：</dt>
+			<dd><input type="text" name="name" value="" class="w200"></dd>
+		</dl>
+		<dl>
+            <dt>商品图片：</dt>
+            <dd><input type="file" name="pic"></dd>
+        <dl>
+		<dl>
+			<dt>商品描述：</dt>
+			<dd><textarea name="desc" id="editor" cols="80" rows="20"></textarea></dd>
+		</dl>
+		<dl>
+			<dt>单价：</dt>
+			<dd><input type="text" name="price" value="">元</dd>
+		</dl>
+		<dl>
+			<dt>库存：</dt>
+			<dd><input type="text" name="num" value=""></dd>
+		</dl>
+		<dl>
+            <dt></dt>
+            <dd><input type="submit" value="添 加" class="btn submit-btn" /></dd>
+        </dl>
+	</form>
+</div>
+<include file="Public:footer" />
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.js">
+</script>
+<script type="text/javascript">
+UE.getEditor('editor');
+</script>

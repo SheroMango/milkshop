@@ -27,72 +27,23 @@
 <body>
 <div class="content">
 
-
-  <!--选项卡 BEGIN-->
-  <div class="tabs">
+<div class="tabs">
     <ul>
-      <li><a href="javascript:void(0)" class="current">修改密码</a></li>
+        <li class="current"><a href="javascript:void(0)" class="current">分组信息</a></li>
     </ul>
-  </div>
-
-  <div class="edit">
-
-    <form method="post" action="<?php echo U('Admin/Setting/pwd');?>" enctype="multipart/form-data">
-
-    <dl>
-
-      <dt>旧密码：</dt>
-
-      <dd>
-
-        <input type="password" name="oldpass" class="w300" />
-
-      </dd>
-
-    </dl>
-
-    <dl>
-
-      <dt>新密码：</dt>
-
-      <dd>
-
-        <input type="password" name="newpass" class="w300"/>
-
-      </dd>
-
-    </dl>
-
-    <dl>
-
-      <dt>重复新密码：</dt>
-
-      <dd>
-
-        <input type="password" name="repass" class="w300"/>
-
-      </dd>
-
-    </dl>
-
-    <dl>
-
-      <dt>&nbsp;</dt>
-
-      <dd><input type="submit"  value="提 交" class="btn_b"/></dd>
-
-    </dl>
-
-    </form>
-
-  </div>
-
-  
-
 </div>
-
-
-
+<div class="edit">
+    <form method="post" action="<?php echo U('Admin/Group/doAddGroup');?>" enctype="multipart/form-data">
+        <dl>
+            <dt>分组名称：</dt>
+            <dd><input type="text" name="name" value="<?php echo ($info["name"]); ?>" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd><input type="submit" value="更 新" class="btn submit-btn" /></dd>
+        </dl>
+    </form>
+</div>
 </div>
 </body>
 </html>

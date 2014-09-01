@@ -33,18 +33,23 @@
     </ul>
 </div>
 <div class="edit">
-    <form method="post" action="<?php echo U('Admin/ProType/info');?>" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>" />
-        <dl>
-            <dt>商品分类名称：</dt>
-            <dd><input type="text" name="name" value="<?php echo ($info["name"]); ?>" class="w200" /></dd>
-        </dl>
-        <dl>
-            <dt></dt>
-            <dd><input type="submit" value="更 新" class="btn submit-btn" /></dd>
-        </dl>
-    </form>
+	<form method="post" action="<?php echo U('Admin/ProType/doAddType');?>" entype="multipart/form-data">
+		<dl>
+			<dt>商品分类：</dt>
+			<dd><input type="text" name="name" value="" class="w200"></dd>
+		</dl>
+		<dl>
+			<dd><input type="submit" value="添 加" class="btn submit-btn"></dd>
+		</dl>
+	</form>
 </div>
 </div>
 </body>
 </html>
+
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.js">
+</script>
+<script type="text/javascript">
+UE.getEditor('editor');
+</script>

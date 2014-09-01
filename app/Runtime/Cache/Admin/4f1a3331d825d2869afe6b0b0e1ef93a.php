@@ -41,7 +41,7 @@
     <form action="<?php echo U('Admin/Order/ls');?>" method="post">
         <table width="100%">
             <td width="100">
-              <input type="text" name="search" class="w300 mr10" placeholder="请输入订单名称进行查询" />
+              <input type="text" name="search" class="w300 mr10" placeholder="请输入订单名或用户名称进行查询" />
             </td>
             <td><input type="submit" value="搜 索" class="btn search-btn" /></td>
         </table>
@@ -56,10 +56,10 @@
         <thead>
           <tr>
             <th width="5%"><input type="checkbox" class="check-all" /></th>
-            <th width="20%"><a href="<?php echo U('Admin/Order/ls',array('sort'=>'name','type'=>$type));?>">订单名</th>
-            <th width="20%"><a href="<?php echo U('Admin/Order/ls',array('sort'=>'id','type'=>$type));?>">用户ID</th>
-            <th width="20%"><a href="<?php echo U('Admin/Order/ls',array('sort'=>'value','type'=>$type));?>">金额</th>
-            <th width="20%"><a href="<?php echo U('Admin/Order/ls',array('sort'=>'status','type'=>$type));?>">状态</th>
+            <th width="20%">订单名</th>
+            <th width="20%">用户ID</th>
+            <th width="20%">金额</th>
+            <th width="20%">状态</th>
             <th width="15%">操作</th>
           </tr>
         </thead>
@@ -71,11 +71,11 @@
           <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                 <td><input type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"></td>
                 <td><?php echo ($vo["name"]); ?></td>
-                <td><?php echo ($vo["userId"]); ?></td>
+                <td><?php echo ($vo["user_id"]); ?></td>
                 <td><?php echo ($vo["value"]); ?></td>
                 <td><?php echo ($vo["status"]); ?></td>
                 <td>
-                    <a href="<?php echo U('Admin/Order//info',array('id'=>$vo[id]));?>" class="mr10">查看</a>
+                    <a href="<?php echo U('Admin/Order/info',array('id'=>$vo[id]));?>" class="mr10">查看</a>
                     <a href="<?php echo U('Admin/Order/del',array('id'=>$vo[id]));?>">删除</a>
                 </td>
               </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>

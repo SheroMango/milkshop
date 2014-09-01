@@ -1,0 +1,24 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">商品分类</a></li>
+    </ul>
+</div>
+<div class="edit">
+	<form method="post" action="{:U('Admin/ProType/doAddType')}" entype="multipart/form-data">
+		<dl>
+			<dt>商品分类：</dt>
+			<dd><input type="text" name="name" value="" class="w200"></dd>
+		</dl>
+		<dl>
+			<dd><input type="submit" value="添 加" class="btn submit-btn"></dd>
+		</dl>
+	</form>
+</div>
+<include file="Public:footer" />
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.js">
+</script>
+<script type="text/javascript">
+UE.getEditor('editor');
+</script>

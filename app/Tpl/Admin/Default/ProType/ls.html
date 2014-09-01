@@ -9,7 +9,7 @@
   <!--END 选项卡-->
   <!--工具栏 BEGIN-->
   <div class="toolbar">
-    <a href="{:U('Admin/ProType/info')}" class="btn"><span>添加商品分类</span></a>
+    <a href="{:U('Admin/ProType/addType')}" class="btn"><span>添加商品分类</span></a>
   </div>
   <!--END工具栏 BEGIN-->
   
@@ -35,7 +35,7 @@
                 <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
                 <td>{$vo.name}</td>
                 <td>
-                    <a href="{:U('Admin/ProType/info',array('id'=>$vo[id]))}" class="mr10">编辑</a>
+                    <a href="{:U('Admin/ProType/updateType',array('id'=>$vo[id]))}" class="mr10">编辑</a>
                     <a href="{:U('Admin/ProType/del',array('id'=>$vo[id]))}">删除</a>
                 </td>
               </tr>

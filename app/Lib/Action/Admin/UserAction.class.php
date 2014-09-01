@@ -20,22 +20,6 @@ class UserAction extends AdminAction
      */
     public function ls()
     {
-        //sort
-        if(!empty($_GET['sort'])){
-            if($_GET['type'] == '1'){
-                $type = 'asc';
-                $type_num = '0';
-            }else{
-                $type = 'desc';
-                $type_num = '1';
-            }
-            $sort = $_GET['sort'].' '.$type;
-            $this->assign('type', $type_num);
-        }else{
-            $sort = 'id desc';
-            $this->assign('type', '1');
-        }
-
         //search
         $map = array();
         if (IS_POST) {
@@ -45,21 +29,21 @@ class UserAction extends AdminAction
             $map['name|tel'] = array('like',"%{$search}%");
         }
 
-        $pid = $this->_get('pid');
-        $pid = ($pid) ? $pid : '0';
-        $map['pid'] = array('eq', $pid);
-
-        //分页
+        //paging
         $count = D('User')->where($map)->count();
         $page = page($count);
         
-
         $list = D('User')->where($map)->order($sort)->limit($page->firstRow, $page->listRows)->select();
-        //print_r(D('Article')->getLastSQL());
-
+        foreach($list as $k=>$v){
+            $list[$k]['sex'] = ($v['sex']) ? '男' : '女';
+        }
+        foreach ($list as $key => $value) {
+            $name = D('UserGroup')->where('id='.$value['pid'])->getField('name');
+            $list[$key]['group'] = $name;
+        }
+        // print_r(D('UserGroup')->getLastSQL());exit;
         $this->assign('list', $list);
         $this->assign('pages', $page->show());
-        $this->assign('pid', $pid);
         $this->display();
     }
 
@@ -74,12 +58,18 @@ class UserAction extends AdminAction
             if(!empty($id)){
                 $info = $obj->where('id='.$id)->find();
                 $pid = $info['pid'];
+                if($info['sex']){
+                    $info['sex'] = '男';
+                }else{
+                    $info['sex'] ='女';
+                }
                 $this->assign('info', $info);
             }else{
                 $pid = $this->_get('pid');
             }
-            $this->assign('grouplist', $this->get_group_list());
+            $this->assign('groupList', $this->get_group_list());
             $this->assign('pid', $pid);
+            $this->assign('sex',$sex);
             $this->display();
             exit;
         }
@@ -96,6 +86,9 @@ class UserAction extends AdminAction
         
     }
     
+    /**
+     * del
+     */
     public function del(){
         $delIds = array();
         $postIds = $this->_post('id');

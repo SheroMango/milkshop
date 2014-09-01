@@ -4,42 +4,39 @@
  */
 class OrderAction extends AdminAction
 {
+    /**
+     * get user list
+     */
+    public function get_user_list()
+    {
+        $list = D('User')->select();
+        return $list;
+    }
+
+    /**
+     * get pro list
+     */
+    public function get_product_list()
+    {
+        $list = D('Product')->select();
+        return $list;
+    }
 
     /**
      * ls
      */
     public function ls()
     {
-        //sort
-        if(!empty($_GET['sort'])){
-            if($_GET['type'] == '1'){
-                $type = 'asc';
-                $type_num = '0';
-            }else{
-                $type = 'desc';
-                $type_num = '1';
-            }
-            $sort = $_GET['sort'].' '.$type;
-            $this->assign('type', $type_num);
-        }else{
-            $sort = 'id desc';
-            $this->assign('type', '1');
-        }
-
         //search
         $map = array();
         if (IS_POST) {
            $search = $this->_post('search');
         }       
         if($search){
-            $map['name'] = array('like',"%{$search}%");
+            $map['name|user_id'] = array('like',"%{$search}%");
         }
 
-        // $pid = $this->_get('pid');
-        // $pid = ($pid) ? $pid : '0';
-        // $map['pid'] = array('eq', $pid);
-
-        //分页
+        //paging
         $count = D('Order')->where($map)->count();
         $page = page($count);
         
@@ -47,33 +44,45 @@ class OrderAction extends AdminAction
         $list = D('Order')->where($map)->order($sort)->limit($page->firstRow, $page->listRows)->select();
         //print_r(D('Article')->getLastSQL());
 
+        foreach ($list as $key => $value) 
+        {
+            $name = D('Product')->where('id='.$value['product_id'])->getField('name');
+            $price = D('Product')->where('id='.$value['product_id'])->getField('price');
+            $list[$key]['name'] = $name;
+            $list[$key]['price'] = $price;
+        }
+
         $this->assign('list', $list);
         $this->assign('pages', $page->show());
         $this->assign('pid', $pid);
         $this->display();
     }
 
+ 
     /**
      * info
      */
     public function info()
     {
         $obj = D('Order');
-        if(empty($_POST)){
+        if(empty($_POST))
+        {
             $id = $this->_get('id');
             if(!empty($id)){
                 $info = $obj->where('id='.$id)->find();
-                $pid = $info['pid'];
                 $this->assign('info', $info);
-            }else{
-                $pid = $this->_get('pid');
             }
-            // $this->assign('grouplist', $this->get_group_list());
-            $this->assign('pid', $pid);
+            $product_name = D('Product')->where('id='.$info['product_id'])->getField('name');
+            $user_name = D('User')->where('id='.$info['user_id'])->getField('name');
+            $info['product_name'] = $product_name;
+            $info['user_name'] = $user_name;
+            $info['price_all'] = $info['price']*$info['num'];
+            $this->assign('info', $info);
             $this->display();
             exit;
         }
         $data = $this->_post();
+        
         // $data['time_modify'] = time();
         if(empty($data['id'])){
             $obj->add($data);

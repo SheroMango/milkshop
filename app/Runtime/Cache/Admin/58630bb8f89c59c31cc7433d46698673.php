@@ -33,10 +33,10 @@
     </ul>
 </div>
 <div class="edit">
-    <form method="post" action="<?php echo U('Admin/ProType/info');?>" enctype="multipart/form-data">
+    <form method="post" action="<?php echo U('Admin/ProType/doUpdateType');?>" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>" />
         <dl>
-            <dt>商品分类名称：</dt>
+            <dt>商品分类：</dt>
             <dd><input type="text" name="name" value="<?php echo ($info["name"]); ?>" class="w200" /></dd>
         </dl>
         <dl>

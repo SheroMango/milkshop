@@ -38,7 +38,7 @@
 
   <!--工具栏 BEGIN-->
   <div class="toolbar">
-      <a href="<?php echo U('Admin/Group/info');?>" class="btn"><span>添加分组</span></a>
+      <a href="<?php echo U('Admin/Group/addGroup');?>" class="btn"><span>添加分组</span></a>
   </div>
   <!--END工具栏 BEGIN-->
   
@@ -62,7 +62,7 @@
                 <td><input type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"></td>
                 <td><?php echo ($vo["name"]); ?></td>
                 <td>
-                    <a href="<?php echo U('Admin/Group/info',array('id'=>$vo[id]));?>" class="mr10">编辑</a>
+                    <a href="<?php echo U('Admin/Group/updateGroup',array('id'=>$vo[id]));?>" class="mr10">编辑</a>
                     <a href="<?php echo U('Admin/Group/del',array('id'=>$vo[id]));?>">删除</a>
                 </td>
               </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>

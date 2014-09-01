@@ -10,15 +10,15 @@
         <input type="hidden" name="pid" value="{$pid}">
         <dl>
             <dt>订单名：</dt>
-            <dd>{$info.name}</dd>
+            <dd>{$info.product_name}</dd>
         </dl> 
          <dl>
-            <dt>用户id</dt>
-            <dd>{$info.name}</dd>
+            <dt>用户id：</dt>
+            <dd>{$info.user_name}</dd>
         </dl>  
         <dl>
             <dt>商品单价：</dt>
-            <dd>{$info.price}</dd>
+            <dd>{$info.price}元</dd>
         </dl>
         <dl>
             <dt>商品数量：</dt>
@@ -26,7 +26,7 @@
         </dl>
         <dl>
             <dt>总价：</dt>
-            <dd>{$info.value}</dd>
+            <dd>{$info.price_all}</dd>
         </dl> 
         <dl>
             <dt>收货地址：</dt>

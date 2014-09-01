@@ -1,0 +1,19 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">分组信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{:U('Admin/Group/doAddGroup')}" enctype="multipart/form-data">
+        <dl>
+            <dt>分组名称：</dt>
+            <dd><input type="text" name="name" value="{$info.name}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd><input type="submit" value="更 新" class="btn submit-btn" /></dd>
+        </dl>
+    </form>
+</div>
+<include file="Public:footer" />

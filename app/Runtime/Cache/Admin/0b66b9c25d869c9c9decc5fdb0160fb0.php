@@ -56,10 +56,10 @@
         <thead>
           <tr>
             <th width="5%"><input type="checkbox" class="check-all" /></th>
-            <th width="20%"><a href="<?php echo U('Admin/User/ls',array('sort'=>'name','type'=>$type));?>">用户名</th>
-            <th width="20%"><a href="<?php echo U('Admin/User/ls',array('sort'=>'tel','type'=>$type));?>">联系方式</th>
-            <th width="20%"><a href="<?php echo U('Admin/User/ls',array('sort'=>'sex','type'=>$type));?>">性别</th>
-            <th width="20%"><a href="<?php echo U('Admin/User/ls',array('sort'=>'pid','type'=>$type));?>">分组</th>
+            <th width="20%">用户名</th>
+            <th width="20%">联系方式</th>
+            <th width="20%">性别</th>
+            <th width="20%">分组</th>
             <th width="15%">操作</th>
           </tr>
         </thead>
@@ -73,9 +73,9 @@
                 <td><?php echo ($vo["name"]); ?></td>
                 <td><?php echo ($vo["tel"]); ?></td>
                 <td><?php echo ($vo["sex"]); ?></td>
-                <td><?php echo ($vo); ?></td>
+                <td><?php echo ($vo["group"]); ?></td>
                 <td>
-                    <a href="<?php echo U('Admin/User//info',array('id'=>$vo[id]));?>" class="mr10">查看</a>
+                    <a href="<?php echo U('Admin/User/info',array('id'=>$vo[id]));?>" class="mr10">查看</a>
                     <a href="<?php echo U('Admin/User/del',array('id'=>$vo[id]));?>">删除</a>
                 </td>
               </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>

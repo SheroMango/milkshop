@@ -1,0 +1,53 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">更新商品信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{:U('Admin/Product/doUpdatePro')}" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$info.id}" />
+        <dl>
+        	<dt>商品分类：</dt>
+        	<dd>
+        		<select name="type_id" value="{$info.type_id}">
+        		<volist name="typeList" id="type">
+                    <option value="{$type.id}" <eq name="info[type_id]" value="$type[id]">selected</eq>>{$type.name}</option>
+                </volist>
+        	</select>
+        	</dd>
+        </dl>
+        <dl>
+        	<dt>商品名称：</dt>
+        	<dd><input type="text" name="name" value="{$info.name}"></dd>
+        </dl>
+        <dl>
+        	<dt>商品图片：</dt>
+        	<dd><input type="file" name="pic"></dd>
+        	<notempty name="info[pic]">
+        		<dd><img src="{$info[pic]|getPicPath}" height="50px"></dd>
+        	</notempty>
+        </dl>
+		<dl>
+			<dt>商品描述：</dt>
+			<dd><textarea name="desc" id="editor" cols="80" rows="20">{$info.desc}</textarea></dd>
+		</dl>
+		<dl>
+			<dt>单价：</dt>
+			<dd><input type="text" name="price" value="{$info.price}">元</dd>
+		</dl>
+		<dl>
+			<dt>库存：</dt>
+			<dd><input type="text" name="num" value="{$info.num}"></dd>
+		</dl>
+		<dl>
+			<dt></dt> 
+			<dd><input type="submit" value="更 新" class="btn submit-btn"></dd>
+		</dl>
+	</div>
+<include file="Public:footer" />
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.js"></script>
+<script type="text/javascript">
+UE.getEditor('editor');
+</script>

@@ -38,7 +38,7 @@
 
   <!--工具栏 BEGIN-->
   <div class="toolbar">
-      <a href="<?php echo U('Admin/Product/info', array('pid'=>$pid));?>" class="btn"><span>添加商品</span></a>
+      <a href="<?php echo U('Admin/Product/addPro', array('pid'=>$pid));?>" class="btn"><span>添加商品</span></a>
   </div>
   <!--END工具栏 BEGIN-->
 
@@ -62,10 +62,11 @@
         <thead>
           <tr>
             <th width="5%"><input type="checkbox" class="check-all" /></th>
-            <th width="20%"><a href="<?php echo U('Admin/Product/ls',array('sort'=>'name','type'=>$type));?>">商品名称</th>
-            <th width="20%"><a href="<?php echo U('Admin/Product/ls',array('sort'=>'desc','type'=>$type));?>">描述</th>
-            <th width="20%"><a href="<?php echo U('Admin/Product/ls',array('sort'=>'price','type'=>$type));?>">价格</th>
-            <th width="20%"><a href="<?php echo U('Admin/Product/ls',array('sort'=>'num','type'=>$type));?>">数量</th>
+            <th width="10%">商品名称</th>
+            <th width="10%">分类</th>
+            <th width="30%">描述</th>
+            <th width="15%">价格</th>
+            <th width="15%">库存</th>
             <th width="15%">操作</th>
           </tr>
         </thead>
@@ -77,12 +78,12 @@
           <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                 <td><input type="checkbox" name="id[]" value="<?php echo ($vo["id"]); ?>"></td>
                 <td><?php echo ($vo["name"]); ?></td>
+                <td><?php echo ($vo["type"]); ?></td>
                 <td><?php echo ($vo["desc"]); ?></td>
                 <td><?php echo ($vo["price"]); ?></td>
                 <td><?php echo ($vo["num"]); ?></td>
                 <td>
-                    <a href="<?php echo U('Admin/Product/ls',array('pid'=>$vo[id]));?>" class="mr10">子文章</a>
-                    <a href="<?php echo U('Admin/Product/info',array('id'=>$vo[id]));?>" class="mr10">编辑</a>
+                    <a href="<?php echo U('Admin/Product/updatePro',array('id'=>$vo[id]));?>" class="mr10">编辑</a>
                     <a href="<?php echo U('Admin/Product/del',array('id'=>$vo[id]));?>">删除</a>
                 </td>
               </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
