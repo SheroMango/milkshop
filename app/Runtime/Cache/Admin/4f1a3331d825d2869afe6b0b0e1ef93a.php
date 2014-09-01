@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -97,3 +98,6 @@
 </div>
 </body>
 </html>
+=======
+<?php if (!defined('THINK_PATH')) exit();?>
+>>>>>>> parent of 5de6e37... 密码修改

@@ -100,6 +100,7 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:0.001315s ]
 INFO: [ view_end ] --END-- [ RunTime:0.001473s ]
 
+<<<<<<< HEAD
 [ 2014-08-27T16:40:59+08:00 ] 127.0.0.1 /milkshop/index.php?g=Admin&m=Product&a=ls
 NOTIC: [8] Use of undefined constant DEFAULT_THEME - assumed 'DEFAULT_THEME' E:\wamp\www\milkshop\app\Conf\Admin\config.php 第 8 行.
 INFO: [ app_begin ] --START--
@@ -391,3 +392,5 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:0.001430s ]
 INFO: [ view_end ] --END-- [ RunTime:0.001573s ]
 
+=======
+>>>>>>> parent of 5de6e37... 密码修改

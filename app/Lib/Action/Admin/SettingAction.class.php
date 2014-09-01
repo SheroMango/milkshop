@@ -2,10 +2,10 @@
 
 /**
  * 后台-全局控制器
- * @version 2014-08-27
+ * @version 2013-08-28
  */
 
-class SettingAction extends AdminAction {
+class SettingAction extends HomeAction {
 
    /**
      * 处理：编辑配置文件
@@ -85,11 +85,11 @@ class SettingAction extends AdminAction {
 
 
 
-        //旧密码
+	    //旧密码
 
-        $password = $userObj->where('id='.$_SESSION['uid'])->getField('pwd');
+	    $password = $userObj->where('id='.$_SESSION['uid'])->getField('password');
 
-        if ($password != md5($oldpass)) {
+	    if ($password != md5($oldpass)) {
 
             $this->error('旧密码不正确');
 
@@ -101,11 +101,13 @@ class SettingAction extends AdminAction {
 
         $update = array(
 
-            'pwd' => md5($newpass),
+            'password' => md5($newpass),
 
         );
 
         $userObj->where('id='.$_SESSION['uid'])->save($update);
+        print_r($userObj->getLastSQL());exit;
+
         $this->success('密码修改成功');
 
     }
